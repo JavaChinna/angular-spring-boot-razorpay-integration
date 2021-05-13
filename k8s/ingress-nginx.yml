@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: social-login-app-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: "client.javachinna.xyz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: social-login-app-client
+            port:
+              number: 80
+  - host: "server.javachinna.xyz"
+    http:
+      paths:
+      - pathType: Prefix
+        path: /api/
+        backend:
+          service:
+            name: social-login-app-server
+            port:
+              number: 8080
+      - pathType: Prefix
+        path: /oauth2/
+        backend:
+          service:
+            name: social-login-app-server
+            port:
+              number: 8080
