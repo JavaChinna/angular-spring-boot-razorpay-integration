@@ -18,3 +18,5 @@
 [Integrate Razorpay Payment Gateway with Angular and Spring Boot Application in 14 Simple Steps
 ](https://www.javachinna.com/integrate-razorpay-payment-gateway-angular-spring-boot-mysql/)
 
+[How to Write Junit 5 Test Cases for Spring REST Controller using Mockito](https://www.javachinna.com/spring-boot-rest-controller-junit-tests-mockito/)
+
