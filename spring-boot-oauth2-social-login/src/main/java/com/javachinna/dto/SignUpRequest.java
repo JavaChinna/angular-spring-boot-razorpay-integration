@@ -35,11 +35,12 @@ public class SignUpRequest {
 
 	private boolean using2FA;
 
-	public SignUpRequest(String providerUserId, String displayName, String email, String password, SocialProvider socialProvider) {
+	public SignUpRequest(String providerUserId, String displayName, String email, String password, String matchingPassword, SocialProvider socialProvider) {
 		this.providerUserId = providerUserId;
 		this.displayName = displayName;
 		this.email = email;
 		this.password = password;
+		this.matchingPassword = matchingPassword;
 		this.socialProvider = socialProvider;
 	}
 
@@ -52,6 +53,7 @@ public class SignUpRequest {
 		private String displayName;
 		private String email;
 		private String password;
+		private String matchingPassword;
 		private SocialProvider socialProvider;
 
 		public Builder addProviderUserID(final String userID) {
@@ -74,13 +76,18 @@ public class SignUpRequest {
 			return this;
 		}
 
+		public Builder addMatchingPassword(final String matchingPassword) {
+			this.matchingPassword = matchingPassword;
+			return this;
+		}
+
 		public Builder addSocialProvider(final SocialProvider socialProvider) {
 			this.socialProvider = socialProvider;
 			return this;
 		}
 
 		public SignUpRequest build() {
-			return new SignUpRequest(providerUserID, displayName, email, password, socialProvider);
+			return new SignUpRequest(providerUserID, displayName, email, password, matchingPassword, socialProvider);
 		}
 	}
 }
