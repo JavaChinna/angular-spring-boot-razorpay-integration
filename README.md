@@ -20,3 +20,4 @@
 
 [How to Write Junit 5 Test Cases for Spring REST Controller using Mockito](https://www.javachinna.com/spring-boot-rest-controller-junit-tests-mockito/)
 
+[4 Methods to Disable Spring Security or Test with Mock Authentication in JUnit Tests](https://www.javachinna.com/disable-spring-security-or-mock-authentication-junit-tests/)
